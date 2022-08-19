@@ -1,0 +1,1 @@
+21:44:30.912 WARN  token 		W[1660657450000, 1660657460000) - ignored transformation token: producerId=1660648591871 token={"valueBase": [-1726793860867858607, 1462771127327563977], "count": [-617609515011061327], "header": null} (expected=null aggregator=null)

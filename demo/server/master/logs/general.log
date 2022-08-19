@@ -1,0 +1,2 @@
+21:49:26.687 WARN  ConsumerConfig 		The configuration 'admin.retries' was supplied but isn't a known config.
+21:49:26.691 WARN  ConsumerConfig 		The configuration 'admin.retry.backoff.ms' was supplied but isn't a known config.

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: Main
+Class-Path: json-20220320.jar netty-all-4.1.52.Final.jar zeph-client-1.0
+ .jar zeph-crypto-1.0.jar
+

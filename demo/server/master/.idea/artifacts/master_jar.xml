@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="master:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/master_jar</output-path>
+    <root id="root">
+      <element id="archive" name="master.jar">
+        <element id="module-output" name="master" />
+      </element>
+      <element id="library" level="project" name="zeph-server-master-1.0" />
+    </root>
+  </artifact>
+</component>

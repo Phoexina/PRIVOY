@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="worker:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/worker_jar</output-path>
+    <root id="root">
+      <element id="archive" name="worker.jar">
+        <element id="module-output" name="worker" />
+      </element>
+      <element id="library" level="project" name="zeph-server-worker-1.0" />
+    </root>
+  </artifact>
+</component>
