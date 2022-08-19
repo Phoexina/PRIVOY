@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="upload_jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/netty-all-4.1.52.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/upload-old.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zeph-client-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/zeph-crypto-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/upload.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: ch.ethz.infk.pps.zeph.Main
+Class-Path: mysql-connector-java-8.0.16.jar zeph-crypto-1.0.jar netty-al
+ l-4.1.52.Final.jar commons-codec.jar zeph-client-1.0.jar
+
