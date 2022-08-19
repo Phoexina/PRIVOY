@@ -1,5 +1,5 @@
 # PRIVOY 
-## <font color= 3399FF>安卓客户端</font>
+## <font color= 3399FF>1 安卓客户端</font>
 ### 主秘密部分
 生成并导入主秘密：  
 调用静态函数loadIdentity，userID为Long类型，basePath为String类型。如主秘密文件已存在，且ID与参数ID一致，则直接导入文件；否则重新生成文件。  
@@ -56,7 +56,7 @@ CiphertextTransformation单例模式，负责发送密文的唯一实例。
 ```
 <br/>
 
-## <font color= 3399FF>数据服务器</font>
+## <font color= 3399FF>2 数据服务器</font>
 ### 安卓数据中转Netty
 需配置好接收密文端口和转发向kafka的端口  
 demo中使用9009端口接收密文，并转发给本机kafka9092
