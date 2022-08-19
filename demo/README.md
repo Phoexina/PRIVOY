@@ -1,7 +1,7 @@
 # PRIVOY demo
 <br />
 
-![image](demo.svg)  
+![image](demo.png)  
 
 &emsp;&emsp;工作小组为测试系统的运行状况，开发了测试demo，其运行需要一台隐私服务器和一台数据服务器，以及一个安卓app，在本次测试中以运动app为例。  
 ## 准备阶段
