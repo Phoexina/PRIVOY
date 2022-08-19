@@ -25,7 +25,7 @@ APP文件存储路径可以参考在主页面获取
     FileUpload.HOST="59.110.115.66";
     FileUpload.TCP_PORT=8080;
 ```
-### 发送密文部分
+### 发送密文数据部分
 发送密文初始化：  
 CiphertextTransformation单例模式，负责发送密文的唯一实例。  
 发送某属性密文前需要初始化属性窗口，获取首个窗口，需等待到窗口开始时间，才能开始发送密文。调用初始化后CiphertextTransformation类型的startsubmit函数，universeId为与我们协商好的数据类型id，返回值为初始窗口Window:(Long windowStart, Long windowEnd)。  
@@ -41,18 +41,38 @@ CiphertextTransformation单例模式，负责发送密文的唯一实例。
     CiphertextTransformationFacade.HOST="8.130.10.212";
     CiphertextTransformationFacade.TCP_PORT=9009;
 ```
-发送密文（一条）：
+发送密文：  
+使用Input构造明文数据，value为接受后累加值，count为本次计数次数
+在初始化且网络正常情况下，使用transformation.submit函数将自动更新窗口、加密明文数据并发送。时间戳可通过System.currentTimeMillis()获取。
 ```java
     Input input =new Input(Long value, Long count);
-    //Input为明文数据，value为接受后累加值，count为本次计数次数
-
-    transformation.submit(Long 密文属性ID,Input input, Long 当前时间戳);
-    //在初始化且网络正常情况下，该函数将自动更新窗口、加密明文数据并发送
+    transformation.submit(Long universeId,Input input, Long timestamp);
 ```
-
-## 结束密文发送：
+结束密文发送：  
+密文传送设置了中断重连，因此当确认不再需要发送密文时，需告知实例不再重连。
+结束发送后，如再次需要发送，则需重新初始化。
 ```java
     transformation.closesubmit();
-    //密文传送设置了中断重连，因此当确认不再需要发送密文时，需告知实例不再重连
-    //结束发送后，如再次需要发送，则需重新初始化
+```
+<br/>
+
+## <font color= 3399FF>数据服务器</font>
+### 安卓数据中转Netty
+需配置好接收密文端口和转发向kafka的端口  
+demo中使用9009端口接收密文，并转发给本机kafka9092
+```bash
+$ cd middle
+$ java -jar server-middle.jar
+```
+### 单数据处理Worker
+需配置好所属的kafka端口
+```bash
+$ cd worker
+$ java -jar worker.jar
+```
+### 总处理Master
+需配置好所属的kafka端口
+```bash
+$ cd master
+$ java -jar master.jar
 ```
